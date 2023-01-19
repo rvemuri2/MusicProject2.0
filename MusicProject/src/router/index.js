@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "@/views/HomeView.vue";
-import About from "@/views/AboutView.vue";
-import Manage from "@/views/Manage.vue";
 import useUserStore from "@/stores/user";
-import Song from "@/views/Song.vue";
+const Home = () => import("@/views/HomeView.vue");
+const About = () => import("@/views/AboutView.vue");
+const Manage = () => import("@/views/Manage.vue");
+const Song = () => import("@/views/Song.vue");
 const routes = [
   {
     name: "Home",
