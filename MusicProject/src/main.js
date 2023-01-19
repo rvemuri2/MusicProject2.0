@@ -10,6 +10,7 @@ import Icon from "./directives/icon";
 import i18n from "./includes/i18n";
 import { registerSW } from "virtual:pwa-register";
 registerSW({ immediate: true });
+import GlobalComponents from "./includes/_globals";
 let app;
 auth.onAuthStateChanged(() => {
   if (!app) {
@@ -20,6 +21,7 @@ auth.onAuthStateChanged(() => {
     app.use(VeeValidatePlugin);
     app.directive("icon", Icon);
     app.use(i18n);
+    app.use(GlobalComponents);
     app.mount("#app");
   }
 });
