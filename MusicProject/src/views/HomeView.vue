@@ -36,7 +36,7 @@
           <!-- Icon -->
         </div>
         <!-- Playlist -->
-        <ol id="playlist">
+        <ol id="playlist" v-if="userStore.userLoggedIn">
           <AppSongItem
             v-for="song in songs"
             :key="song.docID"
@@ -54,6 +54,9 @@
 import { songsCollection } from "../includes/firebase";
 import AppSongItem from "@/components/SongItem.vue";
 import iconSecondary from "../directives/icon-secondary";
+import useUserStore from "@/stores/user";
+import { mapStores } from "pinia";
+import useModalStore from "@/stores/modal";
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
   name: "Home",
@@ -63,6 +66,9 @@ export default {
       maxPerPage: 20,
       pendingRequest: false,
     };
+  },
+  computed: {
+    ...mapStores(useModalStore, useUserStore),
   },
   directives: {
     "icon-secondary": iconSecondary,
@@ -101,6 +107,7 @@ export default {
       });
       this.pendingRequest = false;
     },
+
     handleScroll() {
       const { scrollTop, offsetHeight } = document.documentElement;
       const { innerHeight } = window;
