@@ -1,6 +1,7 @@
 {
   "home": {
-    "listen": "Listen to Great Music!"
+    "listen": "Rohit's Music Application!",
+    "intro": "As a user, you can upload music by signing in/creating a profile and then, drag/drop music files in the given box in the manage section. Have fun being able to make your own playlist of songs, comment on songs, and play your music all in one application!"
   },
   "song": {
     "comment_count": "No comments | 1 comment | {count} comments"
@@ -11,5 +12,9 @@
   },
   "manage": {
     "my_songs": "My Songs"
+  },
+  "Upload": {
+    "upload": "Upload",
+    "files": "Drop your music files here"
   }
 }

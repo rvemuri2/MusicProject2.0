@@ -14,11 +14,11 @@
         <!-- Primary Navigation -->
         <ul class="flex flex-row mt-1">
           <!-- Navigation Links -->
-          <li>
+          <!-- <li>
             <RouterLink class="px-2 text-white" :to="{ name: 'About' }"
               >About</RouterLink
             >
-          </li>
+          </li> -->
           <li v-if="!userStore.userLoggedIn">
             <a class="px-2 text-white" href="#" @click.prevent="toggleAuthModal"
               >Login / Register</a
@@ -59,7 +59,7 @@ export default {
   computed: {
     ...mapStores(useModalStore, useUserStore),
     currentLocale() {
-      return this.$i18n.locale === "fr" ? "French" : "English";
+      return this.$i18n.locale === "fr" ? "English" : "Spanish";
     },
   },
   methods: {

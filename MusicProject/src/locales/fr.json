@@ -1,8 +1,13 @@
 {
   "home": {
-    "listen": "Écoutez de la bonne musique!"
+    "listen": "Aplicación de música de Rohit!",
+    "intro": "Como usuario, puede cargar música iniciando sesión/creando un perfil y luego, arrastrando/soltando archivos de música en el cuadro dado en la sección de administración. Diviértase pudiendo crear su propia lista de reproducción de canciones, comentar canciones y ¡Reproduce tu música en una sola aplicación!"
   },
   "manage": {
     "my_songs": "Mes chansons"
+  },
+  "Upload": {
+    "upload": "Subir",
+    "files": "Suelta tus archivos de música aquí"
   }
 }
